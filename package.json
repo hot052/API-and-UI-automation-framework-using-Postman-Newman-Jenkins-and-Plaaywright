@@ -1,0 +1,19 @@
+{
+  "name": "qa1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:api": "newman run postman/1.json -e postman/1_environment.json -r htmlextra --reporter-htmlextra-export reports/report.html",
+  "test:ui": "playwright test",
+  "test:all": "npm run test:api && npm run test:ui"},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "newman": "^6.2.2",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
